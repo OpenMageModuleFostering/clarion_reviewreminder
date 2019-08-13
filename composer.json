@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Clarion_ReviewReminder",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "This extension helps to send product review reminder to the customers.",
+    "authors": [
+    {
+        "name": "Clarion Technologies",
+        "email": "magento@clariontechnologies.co.in"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
