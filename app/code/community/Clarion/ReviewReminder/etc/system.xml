@@ -91,6 +91,14 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </sender_email_identity>
+						<number_of_reminder translate="label">
+                            <label>Number of reminder emails to be sent</label>
+                            <frontend_type>text</frontend_type>              
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </number_of_reminder>
                     </fields>  
                 </general_settings>
             </groups>

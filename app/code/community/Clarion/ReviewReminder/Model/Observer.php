@@ -142,6 +142,11 @@ class Clarion_ReviewReminder_Model_Observer
                     continue;
                 }
                 
+				//Check config settings for Reminder mail allowed count
+                if(!Mage::Helper('clarion_reviewreminder')->isReminderMailSent($reminder)){
+                    continue;
+                }
+				
                 //send reminder mail
                 $isMailSent = Mage::Helper('clarion_reviewreminder/mail')->sendReminderEmail($reminder);
                 

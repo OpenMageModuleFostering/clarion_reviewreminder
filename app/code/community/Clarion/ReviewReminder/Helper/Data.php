@@ -30,6 +30,14 @@ class Clarion_ReviewReminder_Helper_Data extends Mage_Core_Helper_Abstract
      */
     const XML_PATH_NUM_OF_DAYS_AFTER_ORDER = 'review_reminder/general_settings/number_of_days';
     
+	
+	/**
+     * Config number of reminder mails sent
+     *
+     * @var string
+     */
+    const XML_PATH_REMINDER_MAILS_SENT = 'review_reminder/general_settings/number_of_reminder';
+	
     /**
      * check is reminder data already added
      *
@@ -207,10 +215,7 @@ class Clarion_ReviewReminder_Helper_Data extends Mage_Core_Helper_Abstract
         $collection = Mage::getModel('review/review')->getProductCollection()
             ->addCustomerFilter($cutomerId)
             ->addEntityFilter($productId);
-        
-        //echo $collection->getSelect();
-        //exit;
-        
+                
         if($collection->count() > 0){
           return true;  
         }
@@ -241,5 +246,38 @@ class Clarion_ReviewReminder_Helper_Data extends Mage_Core_Helper_Abstract
     {
          return Mage::getStoreConfig(self::XML_PATH_EXTENSION_ENABLED, $store);
     }
+	
+	/**
+     * check is match number of days after order placed with config number of days
+     *
+     * @param Clarion_ReviewReminder_Model_Reviewreminder $reminder
+     * @return boolean
+     */
+    public function isReminderMailSent ($reminder)
+    {
+        $storeId = Mage::app()->getStore()->getStoreId();
+        $configReminderMailSent = $this->getConfigReminderMailSent($storeId);
+		$reminderCount = $reminder->getReminderCount();
+        
+         if($reminderCount < $configReminderMailSent){
+            return true;
+         } else {
+            return false;
+         }
+    }
+	
+	/**
+     * Get config number of days before mail sent
+     *
+     * @param integer|string|Mage_Core_Model_Store $store 
+     * @return int
+     */
+    public function getConfigReminderMailSent($store = null)
+    {
+         return Mage::getStoreConfig(self::XML_PATH_REMINDER_MAILS_SENT, $store);
+    }
+	
+	
+	
     
 }

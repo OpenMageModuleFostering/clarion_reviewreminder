@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "This extension helps to send product review reminder to the customers.",
+    "description": "Send review reminder mails to customer",
     "authors": [
     {
         "name": "Clarion Technologies",
