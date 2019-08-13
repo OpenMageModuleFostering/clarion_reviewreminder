@@ -18,7 +18,7 @@ class Clarion_ReviewReminder_Block_Adminhtml_Addreminder extends Mage_Adminhtml_
          * $_blockGroup - is your module's name.
          * $_controller - is the path to your grid block. 
          */
-        $this->_controller = 'adminhtml_addreminder';
+        $this->_controller = 'adminhtml_addReminder';
         $this->_blockGroup = 'clarion_reviewreminder';
         $this->_headerText = Mage::helper('clarion_reviewreminder')->__('Add Reminders Manually');
         parent::__construct();

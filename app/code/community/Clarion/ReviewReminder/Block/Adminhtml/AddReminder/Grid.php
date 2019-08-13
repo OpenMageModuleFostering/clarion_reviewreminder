@@ -140,7 +140,7 @@ class Clarion_ReviewReminder_Block_Adminhtml_AddReminder_Grid extends Mage_Admin
             'header'=>Mage::helper('clarion_reviewreminder')->__('Customer Name'),
             'sortable'=>true,
             'index'=>'customer_firstname',
-            'renderer' => 'clarion_reviewreminder/adminhtml_addreminder_renderer_customername',
+            'renderer' => 'clarion_reviewreminder/adminhtml_addReminder_renderer_customerName',
             'filter_condition_callback' => array($this, '_customerNameCondition')
         ));
         
