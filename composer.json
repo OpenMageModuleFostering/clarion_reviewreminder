@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Clarion_ReviewReminder",
+    "name": "openmage-module-fostering\/clarion_reviewreminder",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Send review reminder mails to customer",
     "authors": [
