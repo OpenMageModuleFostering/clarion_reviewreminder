@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Clarion_ReviewReminder",
+    "name": "OpenMageModuleFostering\/Clarion_ReviewReminder",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Send review reminder mails to customer",
     "authors": [
-    {
-        "name": "Clarion Technologies",
-        "email": "magento@clariontechnologies.co.in"
-    }
-],
+        {
+            "name": "Clarion Technologies",
+            "email": "magento@clariontechnologies.co.in"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
